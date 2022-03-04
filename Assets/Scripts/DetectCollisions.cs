@@ -15,10 +15,17 @@ public class DetectCollisions : MonoBehaviour
     {
         
     }
+    //Teste feito quando o IsTrigget não estava selecionado
+    /* private void OnCollisionEnter(Collision collision)
+     {
+         Destroy(gameObject);
+         Destroy(collision.gameObject);
+     }*/
 
-    private void OnCollisionEnter(Collision collision)
+    //Funciona quando o IsTrigger está selecionado
+    private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        Destroy(collision.gameObject);
+        Destroy(other.gameObject);
     }
 }
